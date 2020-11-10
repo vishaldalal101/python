@@ -1,0 +1,17 @@
+import numpy as np
+
+q = 28
+c = 3e8
+E = 21420000000
+
+
+
+def get_rigidity():
+    a=E/(q*c)
+    return a
+
+
+
+b = np.vectorize(get_rigidity)
+
+print('Brho = ', b(),'[Tm]')
